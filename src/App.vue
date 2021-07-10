@@ -1,11 +1,14 @@
 <template>
   <h1> Welcome to {{title}} </h1>
-  <h2>This counter number: {{counter}} </h2>
-  <div v-once>
-    {{ counter }}
-  </div>
-  
-  <button v-on:click="buttonSubmit">Button</button>
+  <h2>computed works</h2>
+  <p>{{ randomC }}</p>
+  <p>{{ randomC }}</p>
+  <p>{{ randomC }}</p>
+  <h2>Method works</h2>
+  <p>{{ randomM() }}</p>
+  <p>{{ randomM() }}</p>
+  <p>{{ randomM() }}</p>
+
 
 </template>
 
@@ -19,15 +22,17 @@
           counter: 1,
         }
       },
-      mounted() {
-        setInterval(() => {
-            this.counter++
-          }, 1000)
+      computed:{
+        randomC(){
+          return Math.random();
+        },
+
       },
       methods:{
-        buttonSubmit(){
-          alert('ok')
-        }
+        randomM(){
+          return Math.random();
+        },
+
       }
 
     }
