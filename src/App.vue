@@ -1,5 +1,7 @@
 <template>
-  <h1> {{title}} </h1>
+  <h1> Welcome to {{title}} </h1>
+  <h2 v-text="title"> </h2>
+  <input v-model="title" />
 </template>
 
 <script>
@@ -8,7 +10,7 @@
     name: 'App',
     data(){
       return {
-        title:'Welcome to vue 3 tutorial',
+        title:'vue 3 tutorial',
       }
     }
   }
