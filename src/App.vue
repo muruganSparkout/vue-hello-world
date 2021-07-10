@@ -1,13 +1,12 @@
 <template>
   <h1> Welcome to {{title}} </h1>
-  <h2>computed works</h2>
-  <p>{{ randomC }}</p>
-  <p>{{ randomC }}</p>
-  <p>{{ randomC }}</p>
-  <h2>Method works</h2>
-  <p>{{ randomM() }}</p>
-  <p>{{ randomM() }}</p>
-  <p>{{ randomM() }}</p>
+  <h2>Event Handling</h2>
+  <input @keydown="doThis" />
+  <!-- both one() and two() will execute on button click -->
+  <button @click="one($event), two($event)">
+    Submit
+  </button>
+  
 
 
 </template>
@@ -22,16 +21,19 @@
           counter: 1,
         }
       },
-      computed:{
-        randomC(){
-          return Math.random();
-        },
-
-      },
+     
       methods:{
-        randomM(){
-          return Math.random();
+        one(event) {
+          alert('first works');
+          console.log(event);
         },
+        two(event) {
+          console.log(event);
+          alert('second works');
+        },
+        doThis() {
+          alert('Key down works');
+        }
 
       }
 
