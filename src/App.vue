@@ -1,45 +1,23 @@
 <template>
-  <h1> Welcome to {{title}} </h1>
-  <h2>Modifiers</h2>
-  Age
-  <input v-model.number="age" />
-  NAme
-  <input v-model.trim="name" />
-  Address
-  <textarea v-model.lazy="address" />
-
+  <AppHeader title="This is from parent Class" />
+  <router-view></router-view>
+  <div class="container-fluid">
+    <FruitsList />
+  </div>
 </template>
 
 <script>
-
-  export default {
-    name: 'App',
-      data(){
-        return {
-          title:'vue 3 tutorial',
-          age: '',
-          name: '',
-          address: '',
-        }
-      },
-     
-      methods:{
-       
-        doThis() {
-          alert('Key down works');
-        }
-
-      }
-
-    }
-    
-</script>
-
-<style>
-  .underline{
-    text-decoration: underline;
+import AppHeader from './components/AppHeader.vue'
+import FruitsList from './components/FruitsList.vue'
+  export default{
+    components:{
+      AppHeader,FruitsList
+    },
+         
   }
-  li{
-    list-style: none;
+</script>
+<style>
+  .navbar-nav a{
+    margin-right:10px;
   }
 </style>
