@@ -1,13 +1,21 @@
 <template>
   <div class="container">
-      <h2>Volume Tracker (0-10)</h2>
-      <br>
-      <h3>Current Value {{ volume }}</h3>
-      <br>
-      <div>
-        <button class="btn btn-sm btn-success" @click="volume +=2">Increase</button>
-        <button class="btn btn-sm btn-info m-2" @click="volume -=2">Decrease</button>
-      </div>
+    <button @click="show = !show">
+      Toggle
+    </button>
+      <transition name="fade">
+        <div v-if="show">this is simple example for transition</div>
+      </transition>
+
+      <!-- <button @click="show = !show">Toggle show</button>
+
+      <transition name="bounce">
+        <p v-if="show">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis
+          enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi
+          tristique senectus et netus.
+        </p>
+      </transition> -->
   </div>
   
 </template>
@@ -17,16 +25,51 @@
 export default ({
    data(){
         return {
-          volume : 0
+          volume : 0,
+          show: true
         }
     },
-    watch:{
-      volume(newValue, oldvalue){
-        if(newValue > oldvalue && newValue===10){
-          this.volume = 8;
-          alert('You have reached volume 10');
-        }
-      }
-    }
+   
 })
 </script>
+<style >
+  .fade-enter-from {
+    opacity: 0;
+  }
+  .fade-enter-to {
+    opacity: 1;
+  }
+  .fade-enter-active {
+    transition: all 2s ease;
+  }
+  .fade-leave-from {
+    opacity: 1;
+  }
+  .fade-leave-to {
+    opacity: 0;
+  }
+  .fade-leave-active {
+    transition: all 2s ease;
+  }
+  
+.bounce-enter-active {
+  animation: bounce-in .5s ease-out both;
+}
+
+.bounce-leave-active {
+  animation: bounce-in .5s reverse ease-in both;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
