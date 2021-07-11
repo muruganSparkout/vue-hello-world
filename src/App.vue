@@ -1,18 +1,16 @@
 <template>
-  <AppHeader title="This is from parent Class" />
+  <AppHeader />
   <router-view></router-view>
-  <div class="container-fluid">
-    <FruitsList />
-  </div>
+  
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue'
-import FruitsList from './components/FruitsList.vue'
   export default{
     components:{
-      AppHeader,FruitsList
+      AppHeader
     },
+   
          
   }
 </script>
