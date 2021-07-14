@@ -1,22 +1,27 @@
 <template>
-  <div class="container">
-    <button @click="show = !show">
-      Toggle
-    </button>
-      <transition name="fade">
-        <div v-if="show">this is simple example for transition</div>
-      </transition>
+   <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">This is vue js beginner tutorial</h1>
+        <p class="lead text-muted">VueJS is a progressive JavaScript framework used to develop interactive web interfaces. Focus is more on the view part, which is the front end. It is very easy to integrate with other projects and libraries. The installation of VueJS is fairly simple,</p>
 
-      <!-- <button @click="show = !show">Toggle show</button>
 
-      <transition name="bounce">
-        <p v-if="show">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis
-          enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi
-          tristique senectus et netus.
-        </p>
-      </transition> -->
-  </div>
+        
+      </div>
+    </section>
+    
+    <div class="container">
+      <h2>Links</h2>
+      <a href="https://github.com/muruganSparkout/vue-hello-world.git" target="_blank">Github Source Code</a>
+      <br>
+        <br>
+      <h1>Topics</h1>
+      <ul class="list-group">
+        <li class="list-group-item">Why vue js</li>
+        <li class="list-group-item">Basic vue concepts</li>
+        <li class="list-group-item">Crud operations with Firebase</li>
+      </ul>
+    </div>
+    
   
 </template>
 
@@ -33,43 +38,5 @@ export default ({
 })
 </script>
 <style >
-  .fade-enter-from {
-    opacity: 0;
-  }
-  .fade-enter-to {
-    opacity: 1;
-  }
-  .fade-enter-active {
-    transition: all 2s ease;
-  }
-  .fade-leave-from {
-    opacity: 1;
-  }
-  .fade-leave-to {
-    opacity: 0;
-  }
-  .fade-leave-active {
-    transition: all 2s ease;
-  }
-  
-.bounce-enter-active {
-  animation: bounce-in .5s ease-out both;
-}
-
-.bounce-leave-active {
-  animation: bounce-in .5s reverse ease-in both;
-}
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 </style>
