@@ -19,7 +19,7 @@
 
       <div class="form-group">
           <label>Phone</label>
-          <input type="text" class="form-control" v-model="form.phone" required>
+          <input type="text" name="phone" class="form-control" v-model="form.phone" required>
       </div>
 
       <button type="submit" class="btn btn-success mt-3">

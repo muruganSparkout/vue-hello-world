@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/Home.vue";
 import Userlist from "@/views/UserList.vue";
 import Edit from '@/views/Edit.vue'
+import VueLinks from '@/views/VueLinks.vue'
 
 const routes = [
   {
@@ -19,7 +20,13 @@ const routes = [
     path: '/edit/:id',
     name: 'Edit',
     component: Edit
-  }
+  },
+  {
+    path: '/vue-links',
+    name: 'VueLinks',
+    component: VueLinks
+  },
+  
   
  
 ];

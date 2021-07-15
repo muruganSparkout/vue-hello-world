@@ -1,6 +1,4 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/storage'
+import firebase from 'firebase'
 import { ref, onUnmounted } from 'vue'
 
 const config = {
