@@ -9,6 +9,8 @@
     <ul class="navbar-nav mr-auto">
         <router-link to="/">Home</router-link>
         <router-link to="/users">Users</router-link>
+        <!-- <router-link to="/api">API</router-link> -->
+        <router-link to="/api-list">Axios</router-link> 
         <router-link to="/vue-links">Vue-Links</router-link>
      
     </ul>

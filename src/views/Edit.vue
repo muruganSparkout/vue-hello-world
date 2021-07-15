@@ -26,6 +26,9 @@
         Update
       </button>
     </form>
+    <br>
+    <br>
+    <br>
   </div>
 </template>
 

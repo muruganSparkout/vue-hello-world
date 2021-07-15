@@ -38,6 +38,7 @@ export const deleteUser = id => {
 export const useLoadUsers = () => {
   const users = ref([])
   const close = usersCollection.onSnapshot(snapshot => {
+    // console.log(snapshot);
     users.value = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
   })
   onUnmounted(close)
