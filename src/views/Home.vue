@@ -14,9 +14,10 @@
         <br>
       <h1>Topics</h1>
       <ul class="list-group">
-        <li class="list-group-item">Why vue js</li>
-        <li class="list-group-item">Basic vue concepts</li>
-        <li class="list-group-item">Crud operations with Firebase</li>
+        <li class="list-group-item">What is VueJS?</li>
+        <li class="list-group-item">Vue.js fundamentals.</li>
+        <li class="list-group-item">Moving from jQuery to VueJS.</li>
+        <li class="list-group-item">Create your first VueJS Application.</li>
       </ul>
     </div>
     
